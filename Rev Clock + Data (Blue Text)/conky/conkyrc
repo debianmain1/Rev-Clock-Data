@@ -1,0 +1,82 @@
+# **********************************************************************
+#  				author  : Abu Yahya
+#  license : Distributed under the terms of GNU GPL v3
+#  30.05.2012
+#  Modified by autocrosser1
+# 
+# **********************************************************************
+# — Conky settings — #
+
+background yes
+
+update_interval 1
+total_run_times 0
+net_avg_samples 2
+
+override_utf8_locale yes
+
+double_buffer yes
+no_buffers yes
+
+text_buffer_size 2048
+imlib_cache_size 0
+
+
+# — Window specifications — #
+
+own_window              yes
+own_window_argb_visual  true
+own_window_argb_value   00000000
+own_window_colour       000000
+own_window_transparent	yes
+own_window_type		normal
+own_window_hints	undecorated,below,sticky,skip_taskbar,skip_pager
+
+border_inner_margin 0
+border_outer_margin 0
+
+minimum_size 330 330
+maximum_width 330
+
+alignment top_right
+
+gap_x 0
+gap_y 10
+
+
+
+# — Graphics settings — #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# — Text settings — #
+use_xft yes
+xftfont Technical CE:size=8.1
+xftalpha 1.0
+
+color0 white
+color1 EAEAEA
+color2 06FF1C
+color3 D9DFDA
+color4 0478FF	
+color5 A40810
+
+uppercase no
+use_spacer right
+
+
+# — Lua Load — #
+
+
+lua_load $HOME/.conky/rev_hd/cups_n_saucers.lua
+lua_draw_hook_post main
+
+TEXT
+${voffset 150}${goto 190}${color4}${font Technical CE:size=18.1}${time %l:%M:%P}${font}
+${voffset 2}${goto 220}${time %a %d %b}  
+
+
+
+
